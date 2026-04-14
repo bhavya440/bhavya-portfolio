@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <title>Bhavya Portfolio</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: Arial;
@@ -28,10 +31,10 @@
     .btn {
       padding: 10px 20px;
       background: #38bdf8;
-      border: none;
       color: black;
+      text-decoration: none;
       margin: 10px;
-      cursor: pointer;
+      display: inline-block;
     }
     .section {
       padding: 50px;
@@ -51,36 +54,36 @@
   <h2>Bhavya</h2>
   <div>
     <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Projects</a>
-    <a href="#">Skills</a>
-    <a href="#">Contact</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <div class="hero">
   <h1>Hello, I'm Bhavya 👋</h1>
   <p>BCA AI Student | Future Developer</p>
-  <button class="btn">View My Work</button>
+  <a href="#projects" class="btn">View My Work</a>
 </div>
 
-<div class="section">
+<div class="section" id="about">
   <h2>About Me</h2>
   <p>I am a BCA student focusing on Artificial Intelligence and web development.</p>
 </div>
 
-<div class="section">
+<div class="section" id="projects">
   <h2>Projects</h2>
   <div class="card">Project 1 - Coming Soon</div>
   <div class="card">Project 2 - Coming Soon</div>
 </div>
 
-<div class="section">
+<div class="section" id="skills">
   <h2>Skills</h2>
   <p>Python | HTML | CSS | AI Basics</p>
 </div>
 
-<div class="section">
+<div class="section" id="contact">
   <h2>Contact</h2>
   <p>Email: your@email.com</p>
 </div>
