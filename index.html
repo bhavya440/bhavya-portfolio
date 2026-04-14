@@ -1,51 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Bhavya Portfolio</title>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: #0f172a;
-      color: white;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px;
-      background: #020617;
-    }
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
-    }
-    .btn {
-      padding: 10px 20px;
-      background: #38bdf8;
-      color: black;
-      text-decoration: none;
-      margin: 10px;
-      display: inline-block;
-    }
-    .section {
-      padding: 50px;
-    }
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      margin: 10px 0;
-      border-radius: 10px;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Bhavya Portfolio</title>
+
+<style>
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #020617;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.btn {
+  padding: 12px 25px;
+  background: #38bdf8;
+  color: black;
+  text-decoration: none;
+  margin: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* SECTIONS */
+.section {
+  padding: 60px 40px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+/* GRID */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.grid .card {
+  flex: 1 1 250px;
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+.stat {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+}
+</style>
 </head>
 
 <body>
@@ -53,7 +96,7 @@
 <nav>
   <h2>Bhavya</h2>
   <div>
-    <a href="#">Home</a>
+    <a href="#top">Home</a>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
@@ -61,32 +104,58 @@
   </div>
 </nav>
 
-<div class="hero">
+<div class="hero" id="top">
   <h1>Hello, I'm Bhavya 👋</h1>
-  <p>BCA AI Student | Future Developer</p>
+  <p>AI Student | Future Software Engineer</p>
   <a href="#projects" class="btn">View My Work</a>
+  <a href="#contact" class="btn">Contact Me</a>
 </div>
 
 <div class="section" id="about">
   <h2>About Me</h2>
-  <p>I am a BCA student focusing on Artificial Intelligence and web development.</p>
+  <p>I am a BCA student passionate about Artificial Intelligence and web development.</p>
+
+  <div class="stats">
+    <div class="stat">1+ Years Learning</div>
+    <div class="stat">5+ Projects</div>
+    <div class="stat">3+ Skills</div>
+  </div>
 </div>
 
 <div class="section" id="projects">
   <h2>Projects</h2>
-  <div class="card">Project 1 - Coming Soon</div>
-  <div class="card">Project 2 - Coming Soon</div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>E-Commerce Project</h3>
+      <p>Online shopping platform with basic features.</p>
+    </div>
+
+    <div class="card">
+      <h3>AI Mini Project</h3>
+      <p>Simple AI-based application using Python.</p>
+    </div>
+  </div>
 </div>
 
 <div class="section" id="skills">
   <h2>Skills</h2>
-  <p>Python | HTML | CSS | AI Basics</p>
+
+  <div class="grid">
+    <div class="card">Python</div>
+    <div class="card">HTML & CSS</div>
+    <div class="card">AI Basics</div>
+  </div>
 </div>
 
 <div class="section" id="contact">
   <h2>Contact</h2>
   <p>Email: your@email.com</p>
 </div>
+
+<footer>
+  © 2026 Bhavya
+</footer>
 
 </body>
 </html>
