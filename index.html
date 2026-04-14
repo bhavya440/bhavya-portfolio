@@ -5,7 +5,42 @@
 <title>Bhavya Portfolio</title>
 
 <style>
-/* BUTTON HOVER */
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #020617;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
 .btn {
   padding: 12px 25px;
   background: #38bdf8;
@@ -23,7 +58,11 @@
   transform: scale(1.1);
 }
 
-/* CARD HOVER */
+/* SECTIONS */
+.section {
+  padding: 60px 40px;
+}
+
 .card {
   background: #1e293b;
   padding: 20px;
@@ -37,16 +76,35 @@
   box-shadow: 0 0 20px #38bdf8;
 }
 
-/* NAV LINKS HOVER */
-nav a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-  transition: 0.3s;
+/* GRID */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-nav a:hover {
-  color: #38bdf8;
+.grid .card {
+  flex: 1 1 250px;
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.stat {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
 }
 </style>
 </head>
@@ -66,7 +124,7 @@ nav a:hover {
 
 <div class="hero" id="top">
   <h1>Hello, I'm Bhavya 👋</h1>
-  <p>AI Student | Future Software Engineer</p>
+  <p id="typing"></p>
   <a href="#projects" class="btn">View My Work</a>
   <a href="#contact" class="btn">Contact Me</a>
 </div>
@@ -88,12 +146,12 @@ nav a:hover {
   <div class="grid">
     <div class="card">
       <h3>E-Commerce Project</h3>
-      <p>Online shopping platform with basic features.</p>
+      <p>Online shopping platform.</p>
     </div>
 
     <div class="card">
       <h3>AI Mini Project</h3>
-      <p>Simple AI-based application using Python.</p>
+      <p>Simple AI-based project.</p>
     </div>
   </div>
 </div>
@@ -116,6 +174,39 @@ nav a:hover {
 <footer>
   © 2026 Bhavya
 </footer>
+
+<!-- TYPING ANIMATION -->
+<script>
+const text = ["AI Student", "Future Developer", "Tech Learner"];
+let i = 0;
+let j = 0;
+let currentText = "";
+let isDeleting = false;
+
+function type() {
+  if (i < text.length) {
+    if (!isDeleting && j <= text[i].length) {
+      currentText = text[i].substring(0, j++);
+    } else if (isDeleting && j >= 0) {
+      currentText = text[i].substring(0, j--);
+    }
+
+    document.getElementById("typing").innerHTML = currentText;
+
+    if (j == text[i].length) isDeleting = true;
+    if (j == 0 && isDeleting) {
+      isDeleting = false;
+      i++;
+    }
+
+    if (i == text.length) i = 0;
+
+    setTimeout(type, isDeleting ? 50 : 100);
+  }
+}
+
+type();
+</script>
 
 </body>
 </html>
