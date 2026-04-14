@@ -5,37 +5,7 @@
 <title>Bhavya Portfolio</title>
 
 <style>
-html { scroll-behavior: smooth; }
-
-body {
-  margin: 0;
-  font-family: Arial;
-  background: #0f172a;
-  color: white;
-}
-
-/* NAVBAR */
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background: #020617;
-  position: sticky;
-  top: 0;
-}
-
-nav a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-}
-
+/* BUTTON HOVER */
 .btn {
   padding: 12px 25px;
   background: #38bdf8;
@@ -45,48 +15,38 @@ nav a {
   display: inline-block;
   border-radius: 5px;
   font-weight: bold;
+  transition: 0.3s;
 }
 
-/* SECTIONS */
-.section {
-  padding: 60px 40px;
+.btn:hover {
+  background: #0ea5e9;
+  transform: scale(1.1);
 }
 
+/* CARD HOVER */
 .card {
   background: #1e293b;
   padding: 20px;
   border-radius: 10px;
   margin: 10px;
+  transition: 0.3s;
 }
 
-/* GRID */
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #38bdf8;
 }
 
-.grid .card {
-  flex: 1 1 250px;
+/* NAV LINKS HOVER */
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-/* STATS */
-.stats {
-  display: flex;
-  gap: 30px;
-  margin-top: 20px;
-}
-.stat {
-  background: #1e293b;
-  padding: 15px;
-  border-radius: 10px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #020617;
+nav a:hover {
+  color: #38bdf8;
 }
 </style>
 </head>
