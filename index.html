@@ -7,7 +7,6 @@
 <style>
 html { scroll-behavior: smooth; }
 
-/* BODY */
 body {
   margin: 0;
   font-family: Arial;
@@ -29,7 +28,6 @@ nav a {
   color: white;
   margin: 0 10px;
   text-decoration: none;
-  transition: 0.3s;
 }
 
 nav a:hover {
@@ -42,8 +40,9 @@ nav a:hover {
   padding: 100px 20px;
 }
 
+/* BUTTON */
 .btn {
-  padding: 12px 25px;
+  padding: 12px 20px;
   background: #38bdf8;
   color: black;
   text-decoration: none;
@@ -70,36 +69,18 @@ nav a:hover {
   padding: 20px;
   border-radius: 10px;
   margin: 10px;
-  transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 20px #38bdf8;
+  box-shadow: 0 0 15px #38bdf8;
+  transform: translateY(-5px);
 }
 
 /* GRID */
 .grid {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
-}
-
-.grid .card {
-  flex: 1 1 250px;
-}
-
-/* STATS */
-.stats {
-  display: flex;
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.stat {
-  background: #111827;
-  padding: 15px;
-  border-radius: 10px;
+  flex-wrap: wrap;
 }
 
 /* FOOTER */
@@ -124,51 +105,50 @@ footer {
   </div>
 </nav>
 
+<!-- HERO -->
 <div class="hero" id="top">
   <h1>Hello, I'm Bhavya 👋</h1>
   <p id="typing"></p>
 
   <a href="#projects" class="btn">View My Work</a>
   <a href="#contact" class="btn">Contact Me</a>
+
+  <!-- DOWNLOAD BUTTON -->
+  <a href="./Bhavya_BCA_Resume_Final.pdf" class="btn" download>
+    📄 Download Resume
+  </a>
 </div>
 
+<!-- ABOUT -->
 <div class="section" id="about">
   <h2>About Me</h2>
-  <p>I am a BCA student passionate about Artificial Intelligence and web development.</p>
-
-  <div class="stats">
-    <div class="stat">Learning Phase</div>
-    <div class="stat">Projects Building</div>
-    <div class="stat">Skill Growth</div>
-  </div>
+  <p>I am a 1st year BCA student learning web development and AI.</p>
 </div>
 
+<!-- PROJECTS -->
 <div class="section" id="projects">
   <h2>Projects</h2>
 
   <div class="grid">
     <div class="card">
-      <h3>E-Commerce Project</h3>
-      <p>Online shopping platform.</p>
+      <h3>Portfolio Website</h3>
+      <p>Built using HTML, CSS & JavaScript</p>
     </div>
 
     <div class="card">
-      <h3>AI Mini Project</h3>
-      <p>Simple AI-based project.</p>
+      <h3>Mini AI Project</h3>
+      <p>Basic AI learning project</p>
     </div>
   </div>
 </div>
 
+<!-- SKILLS -->
 <div class="section" id="skills">
   <h2>Skills</h2>
-
-  <div class="grid">
-    <div class="card">Python</div>
-    <div class="card">HTML & CSS</div>
-    <div class="card">AI Basics</div>
-  </div>
+  <p>HTML | CSS | JavaScript | Python Basics</p>
 </div>
 
+<!-- CONTACT -->
 <div class="section" id="contact">
   <h2>Contact</h2>
   <p>Email: your@email.com</p>
@@ -178,7 +158,7 @@ footer {
   © 2026 Bhavya
 </footer>
 
-<!-- TYPING ANIMATION -->
+<!-- TYPING EFFECT -->
 <script>
 const words = [
   "Normal BCA Student",
@@ -186,36 +166,36 @@ const words = [
   "Web Development Learner"
 ];
 
-let wordIndex = 0;
-let charIndex = 0;
+let i = 0;
+let j = 0;
 let isDeleting = false;
 
-function typeEffect() {
-  let currentWord = words[wordIndex];
+function type() {
+  let current = words[i];
 
   if (!isDeleting) {
     document.getElementById("typing").textContent =
-      currentWord.substring(0, charIndex++);
-
-    if (charIndex > currentWord.length) {
+      current.substring(0, j++);
+    
+    if (j > current.length) {
       isDeleting = true;
-      setTimeout(typeEffect, 1000);
+      setTimeout(type, 1000);
       return;
     }
   } else {
     document.getElementById("typing").textContent =
-      currentWord.substring(0, charIndex--);
+      current.substring(0, j--);
 
-    if (charIndex === 0) {
+    if (j === 0) {
       isDeleting = false;
-      wordIndex = (wordIndex + 1) % words.length;
+      i = (i + 1) % words.length;
     }
   }
 
-  setTimeout(typeEffect, isDeleting ? 50 : 100);
+  setTimeout(type, isDeleting ? 50 : 100);
 }
 
-typeEffect();
+type();
 </script>
 
 </body>
