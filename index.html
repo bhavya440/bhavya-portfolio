@@ -2,201 +2,181 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>bhavya Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhavya Portfolio</title>
 
 <style>
-html { scroll-behavior: smooth; }
-
 body {
   margin: 0;
-  font-family: Arial;
-  background: #000;
-  color: #fff;
-}
-
-/* NAV */
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background: #020617;
-  position: sticky;
-  top: 0;
-}
-
-nav a {
+  font-family: Arial, sans-serif;
   color: white;
-  margin: 0 10px;
-  text-decoration: none;
+  background: radial-gradient(circle at top, #1e3a8a, #020617);
 }
 
-nav a:hover {
-  color: #38bdf8;
+/* NAVBAR */
+nav {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0,0,0,0.3);
+}
+nav a {
+  color: #93c5fd;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* HERO */
-.hero {
+header {
   text-align: center;
-  padding: 100px 20px;
+  padding: 80px 20px;
+}
+h1 {
+  font-size: 42px;
+}
+.subtitle {
+  font-size: 20px;
+  color: #cbd5f5;
+}
+.highlight {
+  color: #60a5fa;
+  font-style: italic;
 }
 
 /* BUTTON */
 .btn {
-  padding: 12px 20px;
-  background: #38bdf8;
-  color: black;
-  text-decoration: none;
-  margin: 10px;
   display: inline-block;
-  border-radius: 5px;
+  margin: 15px;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(59,130,246,0.6);
 }
-
 .btn:hover {
-  background: #0ea5e9;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /* SECTION */
-.section {
-  padding: 60px 40px;
+section {
+  text-align: center;
+  padding: 50px 20px;
+}
+h2 {
+  color: #93c5fd;
 }
 
-/* CARD */
-.card {
-  background: #111827;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 10px;
-}
-
-.card:hover {
-  box-shadow: 0 0 15px #38bdf8;
-  transform: translateY(-5px);
-}
-
-/* GRID */
-.grid {
+/* PROJECT CARDS */
+.projects {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* CONTACT */
+.contact p {
+  margin: 10px;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
-  background: #020617;
+  background: rgba(0,0,0,0.5);
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
-  <h2>bhavya</h2>
-  <div>
-    <a href="#top">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </div>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
 </nav>
 
 <!-- HERO -->
-<div class="hero" id="top">
-  <h1>Hello, I'm Bhavya 👋</h1>
-  <p id="typing"></p>
+<header>
+  <h1>Hi, I'm Bhavya 👋</h1>
+  <p class="subtitle">BCA Student | Aspiring AI Developer</p>
+  <p class="highlight">I build real-world web & AI projects that solve practical problems.</p>
+  <p>Currently looking for internship opportunities</p>
 
-  <a href="#projects" class="btn">View My Work</a>
-  <a href="#contact" class="btn">Contact Me</a>
-
-  <!-- DOWNLOAD BUTTON -->
-  <a href="./Bhavya_BCA_Resume_Final.pdf" class="btn" download>
-    📄 Download Resume
-  </a>
-</div>
+  <a href="#projects" class="btn">View Projects</a>
+  <a href="Bhavya_BCA_Resume_Final.pdf" class="btn">Download Resume</a>
+</header>
 
 <!-- ABOUT -->
-<div class="section" id="about">
+<section id="about">
   <h2>About Me</h2>
-  <p>I am a 1st year BCA student learning web development and AI.</p>
-</div>
+  <p>
+    I am a BCA student passionate about Artificial Intelligence and software development.
+    I enjoy building real-world projects and improving my skills.
+  </p>
+</section>
 
 <!-- PROJECTS -->
-<div class="section" id="projects">
+<section id="projects">
   <h2>Projects</h2>
 
-  <div class="grid">
+  <div class="projects">
     <div class="card">
       <h3>Portfolio Website</h3>
-      <p>Built using HTML, CSS & JavaScript</p>
+      <p>Responsive personal website showcasing my skills.</p>
+      <p><b>Tech:</b> HTML, CSS</p>
+      <a href="#" class="btn">View Code</a>
     </div>
 
     <div class="card">
-      <h3>Mini AI Project</h3>
-      <p>Basic AI learning project</p>
+      <h3>Student Management System</h3>
+      <p>System for managing student records.</p>
+      <p><b>Tech:</b> Python, JavaScript</p>
+      <a href="#" class="btn">View Code</a>
+    </div>
+
+    <div class="card">
+      <h3>AI Chatbot</h3>
+      <p>Basic chatbot for simple Q&A.</p>
+      <p><b>Tech:</b> Python</p>
+      <a href="#" class="btn">View Code</a>
     </div>
   </div>
-</div>
+</section>
 
-<!-- SKILLS -->
-<div class="section" id="skills">
-  <h2>Skills</h2>
-  <p>HTML | CSS | JavaScript | Python Basics</p>
-</div>
+<!-- RESUME -->
+<section>
+  <h2>Resume</h2>
+  <p>Want to know more about my skills and experience?</p>
+  <a href="Bhavya_BCA_Resume_Final.pdf" class="btn">Download Resume</a>
+</section>
 
 <!-- CONTACT -->
-<div class="section" id="contact">
+<section id="contact" class="contact">
   <h2>Contact</h2>
-  <p>Email: awasthiarchana226@email.com</p>
-</div>
+  <p>Email: your-email@gmail.com</p>
+  <p>LinkedIn: your-link</p>
+  <p>GitHub: your-github-link</p>
+</section>
 
+<!-- FOOTER -->
 <footer>
-  © 2026 Bhavya
+  <p>© 2026 Bhavya | Built with passion 💙</p>
 </footer>
-
-<!-- TYPING EFFECT -->
-<script>
-const words = [
-  " BCA Student",
-  " Future Software Developer      ",
-  " Web Development Learner"
-];
-
-let i = 0;
-let j = 0;
-let isDeleting = false;
-
-function type() {
-  let current = words[i];
-
-  if (!isDeleting) {
-    document.getElementById("typing").textContent =
-      current.substring(0, j++);
-    
-    if (j > current.length) {
-      isDeleting = true;
-      setTimeout(type, 1000);
-      return;
-    }
-  } else {
-    document.getElementById("typing").textContent =
-      current.substring(0, j--);
-
-    if (j === 0) {
-      isDeleting = false;
-      i = (i + 1) % words.length;
-    }
-  }
-
-  setTimeout(type, isDeleting ? 50 : 100);
-}
-
-type();
-</script>
 
 </body>
 </html>
