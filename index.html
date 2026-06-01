@@ -55,6 +55,13 @@ h1 {
   font-weight: bold;
   box-shadow: 0 0 15px rgba(59,130,246,0.6);
 }
+  .btn{
+  transition: all 0.3s ease;
+}
+
+.btn:hover{
+  transform: translateY(-3px);
+}
 .btn:hover {
   transform: scale(1.05);
 }
@@ -104,23 +111,61 @@ footer {
 <body>
 
 <!-- NAVBAR -->
-<nav>
+ <nav>
   <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
   <a href="#projects">Projects</a>
   <a href="#contact">Contact</a>
 </nav>
-
 <!-- HERO -->
 <header>
-  <h1>Hi, I'm Bhavya 👋</h1>
-  <p class="subtitle">BCA Student | Aspiring AI Developer</p>
-  <p class="highlight">I build real-world web & AI projects that solve practical problems.</p>
+<h1>Bhavya Awasthi</h1>
+<p class="subtitle">BCA Student | Front-End Web Developer</p>
+  <p class="highlight">
+I build responsive and user-friendly websites using HTML, CSS, and modern web technologies.
+</p>
+  <p>
+I am a BCA student at AKTU with a 7.8 SGPA in my first semester. I am passionate about web development and continuously improving my programming and communication skills.
+</p>
   <p>Currently looking for internship opportunities</p>
+  <section id="skills">
+  <h2>Skills</h2>
 
+  <div class="projects">
+    <div class="card">C Programming</div>
+    <div class="card">HTML</div>
+    <div class="card">CSS</div>
+    <div class="card">Communication Skills</div>
+    <div class="card">Problem Solving</div>
+    <div class="card">MS Office</div>
+  </div>
+</section>
+  <section id="education">
+  <h2>Education</h2>
+
+  <p><b>BCA (Pursuing)</b> - AKTU | 7.8 SGPA</p>
+  <p><b>Class XII (Science)</b> - UP Board | 74.4%</p>
+  <p><b>Class X</b> - UP Board | 87%</p>
+</section>
+<section id="achievements">
+  <h2>Achievements</h2>
+
+  <ul>
+    <li>7.8 SGPA in First Semester of BCA</li>
+    <li>87% in Class X (UP Board)</li>
+    <li>74.4% in Class XII (Science Stream)</li>
+  </ul>
+</section>
   <a href="#projects" class="btn">View Projects</a>
-  <a href="Bhavya_BCA_Resume_Final.pdf" class="btn">Download Resume</a>
-</header>
-
+<a href="Bhavya_Colorful_Resume.pdf" download class="btn">
+    Download Resume
+</a></header>
+<a href="https://github.com/bhavya440/bhavya-portfolio"
+   target="_blank"
+   class="btn">
+   GitHub Portfolio
+</a>
 <!-- ABOUT -->
 <section id="about">
   <h2>About Me</h2>
@@ -150,9 +195,9 @@ footer {
     </div>
 
     <div class="card">
-      <h3>AI Chatbot</h3>
-      <p>Basic chatbot for simple Q&A.</p>
-      <p><b>Tech:</b> Python</p>
+      <h3>Calculator in C</h3>
+<p>Console-based calculator performing basic arithmetic operations.</p>
+<p><b>Tech:</b> C Programming</p>
       <a href="#" class="btn">View Code</a>
     </div>
   </div>
@@ -162,15 +207,51 @@ footer {
 <section>
   <h2>Resume</h2>
   <p>Want to know more about my skills and experience?</p>
-  <a href="file:///C:/Users/user/Downloads/Bhavya_Colorful_Resume.pdf" class="btn">Download Resume</a>
-</section>
+<a href="Bhavya_Colorful_Resume.pdf" download class="btn">
+    Download Resume
+</a></section>
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
   <h2>Contact</h2>
-  <p>Email: your-email@gmail.com</p>
-  <p>LinkedIn: your-link</p>
-  <p>GitHub: your-github-link</p>
+  <!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+
+  <p>
+    Email:
+    <a href="mailto:bawasthi870@gmail.com" style="color:#93c5fd;">
+      bawasthi870@gmail.com
+    </a>
+  </p>
+
+  <p>
+    LinkedIn:
+    <a href="https://www.linkedin.com/in/bhavya-awasthi-2033a23b9/"
+       target="_blank"
+       style="color:#93c5fd;">
+       Bhavya Awasthi
+    </a>
+  </p>
+
+  <p>
+    GitHub:
+    <a href="https://github.com/bhavya440/bhavya-portfolio"
+       target="_blank"
+       style="color:#93c5fd;">
+       bhavya440/bhavya-portfolio
+    </a>
+  </p>
+
+  <p>
+    Phone:
+    <a href="tel:+919793153207" style="color:#93c5fd;">
+      +91 9793153207
+    </a>
+  </p>
+
+  <p>Location: Uttar Pradesh, India</p>
+</section>
 </section>
 
 <!-- FOOTER -->
