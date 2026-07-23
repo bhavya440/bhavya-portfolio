@@ -1,36 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To Do List</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+}
+
+.todo-box{
+    width:400px;
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.todo-box h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#333;
+}
+
+.input-box{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.input-box input{
+    flex:1;
+    padding:12px;
+    border:2px solid #ddd;
+    border-radius:8px;
+    outline:none;
+}
+
+.input-box button{
+    padding:12px 20px;
+    border:none;
+    background:#667eea;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.input-box button:hover{
+    background:#4f63d6;
+}
+
+ul{
+    list-style:none;
+}
+
+ul li{
+    background:#f4f4f4;
+    margin-bottom:10px;
+    padding:12px;
+    border-radius:8px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.delete{
+    color:red;
+    cursor:pointer;
+    font-weight:bold;
+}
+</style>
 </head>
+
 <body>
-    <h1>HTML FORM</h1>
-    <form method="get" action="hello.html">
-    <label for="username">username</label>
-    <input type="text"  id="username"><br> <br>
-<label for="password">password</label>
-<input type="text"  id="password"> <br><br>
-<label for="email">email</label>
-<input type="text" id="email"> <br><br>
-<p>select the gender</p>
-<label for="male">male</label>
-<input type="radio" name="gender"id="male" value="male"><br><br>
-<label for="female">female </label>
-<input type="radio" name="gender" id="female" value="female"><br><br>
-<label for="other">other</label>
-<input type="radio" name="gender"id="other"value="other"><br><br>
-<label for="age-group">select your age-group</label>
-<select name="age-group-values" id="age-group">
-<option value="18-20">18-20</option>
-<option value="20-25">20-25</option>
-<option value="25-30">25-30</option>
-</select><br><br>
 
+<div class="todo-box">
+    <h2>📝 To Do List</h2>
 
+    <div class="input-box">
+        <input type="text" id="taskInput" placeholder="Add your task...">
+        <button onclick="addTask()">Add</button>
+    </div>
 
-<input type="submit" value="sign in">
-</form>
+    <ul id="taskList"></ul>
+</div>
+
+<script>
+function addTask() {
+    let input = document.getElementById("taskInput");
+    let task = input.value.trim();
+
+    if(task === ""){
+        alert("Please enter a task!");
+        return;
+    }
+
+    let li = document.createElement("li");
+
+    li.innerHTML = `git push
+        ${task}
+        <span class="delete" onclick="removeTask(this)">✖</span>
+    `;
+
+    document.getElementById("taskList").appendChild(li);
+    input.value = "";
+}
+
+function removeTask(element){
+    element.parentElement.remove();
+}
+</script>
+
 </body>
 </html>
